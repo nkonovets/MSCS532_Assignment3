@@ -1,2 +1,25 @@
 algorithm,file,n,time_ms,peak_memory_kb
-Quick Sort Random,data/random_small.txt,1000,1.85,34.6
+Quick Sort Random,data/random_small.txt,1000,0.62,39.8
+Quick Sort Random,data/random_mid.txt,10000,7.69,417.1
+Quick Sort Random,data/random_large.txt,50000,44.81,2194.9
+Quick Sort Random,data/sorted_small.txt,1000,0.57,39.1
+Quick Sort Random,data/sorted_mid.txt,10000,7.27,405.6
+Quick Sort Random,data/sorted_large.txt,50000,36.72,2103.1
+Quick Sort Random,data/reverse_small.txt,1000,0.57,36.6
+Quick Sort Random,data/reverse_mid.txt,10000,7.15,415.3
+Quick Sort Random,data/reverse_large.txt,50000,37.34,2200.2
+Quick Sort Random,data/repeated_small.txt,1000,0.13,39.5
+Quick Sort Random,data/repeated_mid.txt,10000,1.15,356.7
+Quick Sort Random,data/repeated_large.txt,50000,5.03,1986.4
+Quick Sort Deterministic,data/random_small.txt,1000,0.56,40.9
+Quick Sort Deterministic,data/random_mid.txt,10000,6.19,509.4
+Quick Sort Deterministic,data/random_large.txt,50000,36.57,2531.4
+Quick Sort Deterministic,data/sorted_small.txt,1000,12.4,4326.7
+Quick Sort Deterministic,data/sorted_mid.txt,10000,1074.56,407475.9
+Quick Sort Deterministic,data/sorted_large.txt,50000,34726.4,9177641.1
+Quick Sort Deterministic,data/reverse_small.txt,1000,12.11,4292.6
+Quick Sort Deterministic,data/reverse_mid.txt,10000,1166.49,416621.2
+Quick Sort Deterministic,data/reverse_large.txt,50000,32986.66,10362581.9
+Quick Sort Deterministic,data/repeated_small.txt,1000,1.57,104.6
+Quick Sort Deterministic,data/repeated_mid.txt,10000,108.42,5082.2
+Quick Sort Deterministic,data/repeated_large.txt,50000,2481.97,111472.2
