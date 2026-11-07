@@ -1,0 +1,2 @@
+algorithm,file,n,time_ms,peak_memory_kb
+Quick Sort Random,data/random_small.txt,1000,1.85,34.6

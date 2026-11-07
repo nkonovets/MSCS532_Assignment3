@@ -1,6 +1,5 @@
 import random
 
-numbers = [5, 1, 8, 4, 9, 6, 4, 2, 3]   # list of numbers for testing
 
 def quicksort_random(data, left = 0, right = None): 
 
@@ -14,22 +13,26 @@ def quicksort_random(data, left = 0, right = None):
 
     rightpart = []                       # create two list to put the sorted numbers into
     leftpart = []
+    even = []
 
     for i in data:                          # for loop that sorts the numbers and puts them into lists that are to the right or to the left of the pivot respectively
 
-        if i >= pivot:
+        if i > pivot:
             rightpart.append(i)
-
         elif i < pivot:
             leftpart.append(i)
+        else:
+            even.append(i)
 
 
 
-    return quicksort_random(leftpart) + [pivot] + quicksort_random(rightpart)   # return the result of the both functions together, each time function is being called for every other sorted part of the list making the function recursive
+    sorted_data = quicksort_random(leftpart) + even + quicksort_random(rightpart)
+    return sorted_data                      # return the result of the both functions together, each time function is being called for every other sorted part of the list making the function recursive
     
 
-print(quicksort_random(numbers))
-    
+
+def quicksort_random_in_place(numbers_list, left, right):
+    numbers_list[left:right + 1] = quicksort_random(numbers_list[left:right + 1])
 
 
 
