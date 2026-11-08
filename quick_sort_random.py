@@ -13,7 +13,7 @@ def quicksort_random(data, left = 0, right = None):
 
     rightpart = []                       # create two list to put the sorted numbers into
     leftpart = []
-    even = []
+    even = [pivot]
 
     for i in data:                          # for loop that sorts the numbers and puts them into lists that are to the right or to the left of the pivot respectively
 

@@ -14,26 +14,26 @@ If we take two numbers from the sorted order, they stay in the same list until o
 
 ### Results
 
-As I described in Assignment 2 last week, the quicksort algorithm performs well on a random data set. And this time, both of the quicksort algorithms showed really good time and memory results. At 50,000 numbers, the deterministic version took 36.57 ms, and the random version took 44.81 ms, indicating that, in my case, the deterministic version is still slightly faster than the quicksort with the random pivot.
+As I described in Assignment 2 last week, the quicksort algorithm performs well on a random data set. And this time, both of the quicksort algorithms showed really good time and memory results. At 50,000 numbers, the deterministic version took 36.57 ms, and the random version took 50.81 ms, indicating that, in my case, the deterministic version is still slightly faster than the quicksort with the random pivot.
 
-The real difference comes in place when comparing both types of quicksort on the sorted and reverse-sorted sets of data, and the difference is huge. The deterministic version always takes the first number as the pivot, which, in a sorted or reverse-sorted list, is always the smallest or largest number, so every split leaves almost all the numbers on one side. That is where deterministic quicksort hits its worst case. Sorting the set of 50,000 numbers took 34.7 seconds, while the random quicksort took a blazing 36.72 ms, which truly shows the difference between two versions of the same algorithm.
+The real difference comes in place when comparing both types of quicksort on the sorted and reverse-sorted sets of data, and the difference is huge. The deterministic version always takes the first number as the pivot, which, in a sorted or reverse-sorted list, is always the smallest or largest number, so every split leaves almost all the numbers on one side. That is where deterministic quicksort hits its worst case. Sorting the set of 50,000 numbers took 34.7 seconds, while the random quicksort took a blazing 38.96 ms, which truly shows the difference between two versions of the same algorithm.
 
-In contrast, on the set with repeated values, the random version was the fastest of all, and took only 5.03 ms to sort the list with 50,000 numbers. This speed comes from the fact that the even[] list places all equal numbers in one step.
+In contrast, on the set with repeated values, the random version was the fastest of all, and took only 4.84 ms to sort the list with 50,000 numbers. This speed comes from the fact that the even[] list places all equal numbers in one step.
 
 | Input          |      n | Deterministic Memory (KB) | Deterministic Time (ms) | Random Memory (KB) | Random Time (ms) |
 | -------------- | -----: | ------------------------: | ----------------------: | -----------------: | ---------------: |
-| Random         |  1,000 |                      40.9 |                    0.56 |               39.8 |             0.62 |
-|                | 10,000 |                     509.4 |                    6.19 |              417.1 |             7.69 |
-|                | 50,000 |                   2,531.4 |                   36.57 |            2,194.9 |            44.81 |
-| Sorted         |  1,000 |                   4,326.7 |                   12.40 |               39.1 |             0.57 |
-|                | 10,000 |                 407,475.9 |                1,074.56 |              405.6 |             7.27 |
-|                | 50,000 |               9,177,641.1 |               34,726.40 |            2,103.1 |            36.72 |
-| Reverse-sorted |  1,000 |                   4,292.6 |                   12.11 |               36.6 |             0.57 |
-|                | 10,000 |                 416,621.2 |                1,166.49 |              415.3 |             7.15 |
-|                | 50,000 |              10,362,581.9 |               32,986.66 |            2,200.2 |            37.34 |
-| Repeated (0–9) |  1,000 |                     104.6 |                    1.57 |               39.5 |             0.13 |
-|                | 10,000 |                   5,082.2 |                  108.42 |              356.7 |             1.15 |
-|                | 50,000 |                 111,472.2 |                2,481.97 |            1,986.4 |             5.03 |
+| Random         |  1,000 |                      40.9 |                    0.56 |               36.2 |             0.69 |
+|                | 10,000 |                     509.4 |                    6.19 |              386.7 |             7.97 |
+|                | 50,000 |                   2,531.4 |                   36.57 |            1,981.9 |            50.81 |
+| Sorted         |  1,000 |                   4,326.7 |                   12.40 |               40.4 |             0.59 |
+|                | 10,000 |                 407,475.9 |                1,074.56 |              492.8 |             7.26 |
+|                | 50,000 |               9,177,641.1 |               34,726.40 |            2,349.3 |            38.96 |
+| Reverse-sorted |  1,000 |                   4,292.6 |                   12.11 |               48.9 |             0.66 |
+|                | 10,000 |                 416,621.2 |                1,166.49 |              468.7 |             7.99 |
+|                | 50,000 |              10,362,581.9 |               32,986.66 |            2,446.1 |            39.67 |
+| Repeated (0–9) |  1,000 |                     104.6 |                    1.57 |               39.4 |             0.12 |
+|                | 10,000 |                   5,082.2 |                  108.42 |              372.0 |             0.99 |
+|                | 50,000 |                 111,472.2 |                2,481.97 |            1,647.8 |             4.84 |
 
 ## Part 2: Hash Tables
 

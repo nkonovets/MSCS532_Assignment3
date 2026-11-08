@@ -44,7 +44,7 @@ python3 hash_table.py
 
 ## Summary of findings
 
-- On random input both Quicksorts are fast, about 37–45 ms at 50,000 numbers.
-- On sorted and reverse-sorted input the deterministic version hits its O(n²) worst case and takes about 33–35 seconds at 50,000 numbers, while the random version stays around 37 ms.
+- On random input both Quicksorts are fast, about 37–51 ms at 50,000 numbers.
+- On sorted and reverse-sorted input the deterministic version hits its O(n²) worst case and takes about 33–35 seconds at 50,000 numbers, while the random version stays around 39–40 ms.
 - On repeated values the random version is the fastest (5 ms at 50,000 numbers) because equal numbers are placed in one step.
 - The hash table keeps insert, search and delete at O(1) on average by doubling its size when the load factor goes above 0.75.
